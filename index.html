@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro forum</title>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- added google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <!-- css styles -->
+    <style>
+        .font-mulish {
+            font-family: "Mulish", sans-serif;
+        }
+    </style>
+    <!-- link daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <!-- navber starts here -->
+        <nav class="w-4/5 m-auto flex justify-between mt-8">
+            <div>
+                <h1 class="text-2xl lg:text-4xl font-black">ReTro</h1>
+            </div>
+            <div class="flex gap-7">
+                <div class="tooltip" data-tip="Home">
+                    <img src="./icons/home.png" alt="">
+                </div>
+                <div class="tooltip" data-tip="Edit">
+                    <img src="./icons/pencil.png" alt="">
+                </div>
+                <div class="tooltip" data-tip="Add">
+                    <img src="./icons/user.png" alt="">
+                </div>
+                <div class="tooltip" data-tip="Flag">
+                    <img src="./icons/flag.png" alt="">
+                </div>
+                <button class="btn bg-[#797DFC] rounded-full w-28 text-white font-bold">Sign In</button>
+            </div>
+        </nav>
+        <!-- banner section starts here -->
+        <section
+            class="p-5 max-w-6xl m-auto h-[550px] rounded-3xl bg-[url(./images/bgbanner.png)] bg-[#12132D] bg-cover flex flex-col lg:flex-row justify-center items-center lg:px-40 mt-10">
+            <div>
+                <h1 class="text-white text-3xl lg:text-5xl font-black lg:pr-48">Welcome to the <span
+                        class="text-[#797DFCFF]">ReTro</span> Forum</h1>
+                <p class="my-6 text-lg lg:text-xl text-gray-400 font-500 lg:pr-48">Share your favorite opinion and win
+                    and wp forum coffee mug!</p>
+                <div class="bg-white w-96 p-1 flex rounded-3xl">
+                    <input type="text" placeholder="search here anything" class="input w-full max-w-xs" />
+                    <button class="btn bg-[#797DFC] rounded-full w-28 text-white font-semibold text-lg">Search</button>
+                </div>
+            </div>
+            <div class="bg-white lg:w-96 h-64 rounded-3xl">
+                <div class="mt-10">
+                    <div class="flex justify-around text-xl leading-10">
+                        <h1 class="text-[#12132DCC] font-medium">Registered Users</h1>
+                        <p class="text-[#12132DCC] font-medium">01</p>
+                    </div>
+                    <div class="flex justify-around text-xl leading-10">
+                        <h1 class="text-[#12132DCC] font-medium">Forum</h1>
+                        <p class="text-[#12132DCC] font-medium">05</p>
+                    </div>
+                    <div class="flex justify-around text-xl leading-10">
+                        <h1 class="text-[#12132DCC] font-medium">Topics</h1>
+                        <p class="text-[#12132DCC] font-medium">01</p>
+                    </div>
+                    <div class="flex justify-around text-xl leading-10">
+                        <h1 class="text-[#12132DCC] font-medium">Replies</h1>
+                        <p class="text-[#12132DCC] font-medium">01</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- main starts here -->
+    <main>
+    <!-- Let's discuss section starts here -->
+    <section class="mt-20">
+        <div class="text-center mb-10">
+        <h1 class="text-4xl font-black">Let’s Discuss</h1>
+        <p class="text-lg font-normal text-[#12132D99] my-4">Yes, you can run unit tests and view the results directly within the app. The integrated<br>testing features allow for a streamlined .</p>
+        </div>
+    <div class="flex flex-col lg:flex-row lg:justify-center gap-5 mb-5">
+        <!-- left side card -->
+        <div class="bg-[#797DFC1A] p-10 rounded-2xl gap-5">
+        <div class="flex flex-col lg:flex-row gap-7">
+        <div>
+        <div class="h-20 w-20  lg:text-left lg:m-0 text-center m-auto bg-[#f9f9fafd] rounded-lg">
+        <img src="" alt="">
+</div>
+         <div class="h-5 w-5 lg:m-0 text-center m-auto bg-[#10B981] relative rounded-full left-9 lg:left-16 bottom-20 border-gray-200 border-2">
+</div>
+</div>
+        <div>
+        <div class="flex gap-10 justify-center lg:justify-start text-[#12132D99] font-bold">
+        <div><span id="#">#</span></div>
+        <div><span id="Author">Author :</span></div>
+</div>
+    <!-- text -->
+    <div class="text-center lg:text-left">
+    <h1 class="font-bold text-xl my-2">10 Kids Unaware of Their Halloween Costume</h1>
+    <p class="max-w-xl text-base font-medium text-[#12132D99] border-b-2 border-dashed pb-4 pt-2">It’s one thing to subject yourself to ha Halloween costume mishap because, hey that’s your prerogative</p>
+</div>
+    <!-- icons -->
+    <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-center items-center lg:justify-between my-4 text-base font-medium text-[#12132D99]">
+    <div class="flex gap-10">
+    <div class="flex gap-2"> <img src="./images/mail (1).png" alt=""> <span id="message">560</span></div>
+    <div class="flex gap-2"> 
+    <img src="./images/eye.png" alt=""> <span id="view">1,568</span></div>
+    <div class="flex gap-2"> 
+    <img src="./images/time.png" alt=""> <span id="time">5 min</span></div>
+</div>
+    <div>
+    <img id="mail" src="./images/email.png" alt="">
+</div>
+</div>
+ <!-- empty one -->
+         <div></div>
+</div>
+</div>
+
+</div>
+        <!-- right side card -->
+        <div class="bg-[#12132D0D] p-6 rounded-lg mt-5 lg:mt-0">
+         <!-- correct mark -->
+        <div class="flex gap-6 justify-between">
+        <div class="text-xl font-extrabold">Title</div>
+        <div class="flex gap-2 font-normal">
+        <div><img src="./images/correct-mark.png" alt=""></div>
+        <div>
+        <h2 class="text-base text-[#12132D99] font-medium">Mark as read <span id="">(4)</span></h2>
+</div>
+</div>
+</div>
+        <!-- views -->
+        <div class="flex  bg-white px-10 py-4 rounded-lg mt-7 flex-col lg:flex-row lg:justify-center items-center">
+        <div>
+        <h1 class="w-52 mt-auto my-3 lg:my-0 lg:text-left text-center text-base font-semibold text-black">10 Kids Unaware of Their Halloween Costume</h1>
+</div>
+        <div>
+        <div class="flex text-[#12132D99] font-medium space-x-2"> 
+        <img src="./images/tabler-icon-eye.png" alt=""> 
+        <span id="view-count">1,588</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Join Our forum section starts here -->
+        <section
+            class="max-w-6xl m-auto bg-[#12132D] rounded-3xl mt-24 h-[403px] flex flex-col lg:flex-row justify-center items-center">
+            <div class="flex">
+                <div class="mt-14">
+                    <h1 class="text-4xl font-black text-white">Join Our Forum</h1>
+                    <p class="text-lg font-normal text-white my-6">Share your favorite opinion and win and wp forum
+                        coffee mug! Yes, you can<br>run unit tests and view the results directly within the app.</p>
+                    <button
+                        class="btn bg-[#797DFC] rounded-full w-52 border-none text-white font-semibold text-lg">Registered
+                        Now</button>
+                </div>
+                <img src="./images/joinforum.png" alt="">
+            </div>
+        </section>
+
+<!-- latest posts section starts here -->
+<section class="mt-20 mb-10">
+    <div class="text-center mb-10">
+        <h1 class="text-4xl font-black">Latest Posts</h1>
+        <p class="text-lg font-normal text-[#12132D99] my-4">Yes, you can run unit tests and view the results directly within the app. The<br>integrated testing features allow for a streamlined .</p>
+</div>
+     <div class="grid grid-cols-1 lg:grid-cols-3 my-5 gap-3">
+    <!-- card 1-->
+     <div class="p-4 border">
+     <div class="lg:w-80 h-48 2xl:w-full 2xl:gap-28 bg-[#12132D0D]"></div>
+     <div class="flex gap-2 my-3 justify-center lg:justify-start"><img src="./images/calender.png" alt=""> <span id="date" class="text-base text-[#12132D99]">Time</span></div>
+     <div class="lg:w-80 space-y-3 text-center lg:text-left">
+        <h1 class="text-[#12132D] text-lg font-bold">What will a mars habitat force that impact in our daily life!!!</h1>
+        <p class="text-base text-[#12132D99]">Yes, you can run unit tests and view the results directly within the app.</p>
+    </div>
+     <div class="flex justify-center lg:justify-start gap-5 my-4">
+     <div class="w-11 h-11 rounded-lg">
+        <img class="rounded-full" src="./images/Ellipse 1.png" alt="">
+    </div>
+         <div>
+            <div class="flex lg:text-left text-center flex-col text-base font-bold">Cameron Williamson <span class="text-sm text-[#12132D80]" id="person">Unknown</span></div> 
+        </div>
+    </div>
+  </div>
+
+    <!-- card 2 -->
+     <div class="p-4 border">
+     <div class=" lg:w-80 h-48 2xl:w-full 2xl:gap-28 bg-[#12132D0D]"></div>
+     <div class="flex gap-2 my-3 justify-center lg:justify-start"><img src="./images/calender.png" alt=""> <span id="date" class="text-base text-[#12132D99]">Time</span></div>
+     <div class="lg:w-80 space-y-3 text-center lg:text-left">
+        <h1 class="text-[#12132D] text-lg font-bold">What will a mars habitat force that impact in our daily life!!!</h1>
+        <p class="text-base text-[#12132D99]">Yes, you can run unit tests and view the results directly within the app.</p>
+    </div>
+    <div class="flex justify-center lg:justify-start gap-5 my-4">
+        <div class="w-11 h-11 rounded-lg">
+        <img class="rounded-full" src="./images/Ellipse 1.png" alt="">
+    </div>
+        <div>
+            <div class="flex lg:text-left text-center flex-col text-base font-bold">Cameron Williamson <span class="text-sm text-[#12132D80]" id="person">Unknown</span></div>  
+        </div>
+    </div>
+  </div>
+
+    <!-- card 3-->
+    <div class="p-4 border">
+    <div class=" lg:w-80 h-48 2xl:w-full 2xl:gap-28 bg-[#12132D0D]"></div>
+    <div class="flex gap-2 my-3 justify-center lg:justify-start"><img src="./images/calender.png" alt=""> <span id="date" class="text-base text-[#12132D99]">Time</span></div>
+    <div class="lg:w-80 space-y-3 text-center lg:text-left">
+        <h1 class="text-[#12132D] text-lg font-bold ">What will a mars habitat force that impact in our daily life!!!</h1>
+        <p class="text-base text-[#12132D99]">Yes, you can run unit tests and view the results directly within the app.</p>
+    </div>
+    <div class="flex justify-center lg:justify-start gap-5 my-4">
+        <div class="w-11 h-11 rounded-lg">
+          <img class="rounded-full" src="./images/Ellipse 1.png" alt="">
+    </div>
+        <div>
+          <div class="flex lg:text-left text-center flex-col text-base font-bold">Cameron Williamson <span class="text-sm text-[#12132D80]" id="person">Unknown</span></div>
+        </div>
+    </div>
+  </div>
+  </div>
+</section>
+</main>
+    <!-- footer starts here -->
+    <footer class="bg-[#6d6e811a] w-full m-auto h-[489px] text-center mt-20 py-28">
+        <div>
+            <h1 class="text-4xl font-black text-[#12132D]">ReTro</h1>
+            <p class="text-[#12132D99] text-lg font-medium my-6">Contrary to popular belief, Lorem Ipsum is not simply
+                random text. It has roots<br>in a piece of classical Latin literature from 45 BC</p>
+            <div class="space-x-6 mt-6">
+                <i class="fa-brands fa-twitter text-2xl"></i>
+                <i class="fa-brands fa-facebook-f text-2xl"></i>
+                <i class="fa-brands fa-instagram text-2xl"></i>
+                <i class="fa-brands fa-github text-2xl"></i>
+            </div>
+            <hr class="border-b-2 mt-12">
+            <p class="text-lg font-medium text-[#12132D70] mt-14">2017, All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
