@@ -1,3 +1,8 @@
+
+const markDivContainer = document.getElementById('mark-div-container')
+
+const count = document.getElementById('count')
+
 // load data from API
 const loadPosts = async () => {
   const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts");
@@ -44,7 +49,7 @@ const loadPosts = async () => {
      <img src="./images/time.png"> <span>${post.posted_time}</span></div>
  </div>
  <div>
-      <button class=" px-2 rounded-full bg-[#10B981] font-bold text-center  text-xl text-white"><i class="fa fa-envelope" style="font-size:15px"></i></button>
+      <button onclick = 'handleAddToMark("${post.title.replace("'","")}--${post.view_count}")' class=" px-2 rounded-full bg-[#10B981] font-bold text-center  text-xl text-white"><i class="fa fa-envelope" style="font-size:15px"></i></button>
       </div>
      </div>
     </div>
@@ -99,3 +104,27 @@ const loadLatestPosts = async () => {
 }
 // call the 2nd function for latest posts
 loadLatestPosts();
+
+const handleAddToMark = (value) =>{
+const convertToArray = value.split("--")
+const [title, view_count] = convertToArray
+const convertedCount = Number(count.innerText )+1
+count.innerText = convertedCount;
+
+const div = document.createElement('div')
+div.classList = "flex  bg-white px-10 py-4 rounded-lg mt-7 flex-col lg:flex-row lg:justify-center items-center";
+div.innerHTML = `
+<div>
+             <h1 class="w-52 mt-auto my-3 lg:my-0 lg:text-left text-center text-base font-semibold text-black">${title}</h1>
+     </div>
+            <div>
+            <div class="flex text-[#12132D99] font-medium space-x-2"> 
+            <img src="./images/tabler-icon-eye.png" alt="">
+            <span>${view_count}</span>
+     </div>
+   </div>
+
+`
+markDivContainer.appendChild(div);
+
+}
