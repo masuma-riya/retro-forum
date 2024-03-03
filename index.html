@@ -53,8 +53,8 @@
                 <h1 class="text-white text-3xl lg:text-5xl font-black lg:pr-48">Welcome to the <span class="text-[#797DFCFF]">ReTro</span> Forum</h1>
                 <p class="my-6 text-lg lg:text-xl text-gray-400 font-500 lg:pr-48">Share your favorite opinion and win and wp forum coffee mug!</p>
                 <div class="bg-white w-96 p-1 flex rounded-3xl">
-                    <input type="text" placeholder="search here anything" class="input w-full max-w-xs" />
-                    <button class="btn bg-[#797DFC] rounded-full w-28 text-white font-semibold text-lg">Search</button>
+                <input id="input-container" type="text" placeholder="search here anything" class="input w-full max-w-xs" />
+                <button id="button-container" class="btn bg-[#797DFC] rounded-full w-28 text-white font-semibold text-lg">Search</button>
                 </div>
             </div>
             <div class="bg-white lg:w-96 h-64 rounded-3xl">
@@ -94,21 +94,20 @@
         <div>
               <!-- title-card -->
               <div class="bg-[#12132D0D] p-6 rounded-lg mt-5 lg:mt-0">
+                <!-- static part start -->
                <div class="flex gap-6 justify-between">
                <div class="text-xl font-extrabold">Title</div>
-               <div class="flex gap-2 font-normal">
+               <div class="flex gap-3 font-normal">
                <div><img src="./images/correct-mark.png" alt=""></div>
                <div>
-               <h2 class="text-base text-[#12132D99] font-medium">Mark as read(<span id="count">0</span>)</h2>
+               <h2 class="text-lg text-black font-medium">Mark as read <span id="count">0</span></h2>
              </div>
              </div>
+             <!-- static part end -->
              </div>
 
-
-       <div id="mark-div-container">
-       </div>
-
-            
+    <div id="mark-div-container"></div>
+       
   </div>
  </div>
 </div>

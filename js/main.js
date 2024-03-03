@@ -1,11 +1,16 @@
-
-const markDivContainer = document.getElementById('mark-div-container')
-
-const count = document.getElementById('count')
+const inputContainer = document.getElementById('input-container');
+const btnContainer = document.getElementById('button-container');
 
 // load data from API
-const loadPosts = async () => {
-  const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts");
+const loadPosts = async (inputValue) => {
+  let url;
+   if(inputValue){
+  url = `https://openapi.programming-hero.com/api/retro-forum/posts?category=${inputValue}`
+ }
+ else{
+  url = "https://openapi.programming-hero.com/api/retro-forum/posts"
+ }
+  const res = await fetch(url);
   const data = await res.json();
   const posts = data.posts;
   displayPosts(posts);
@@ -14,7 +19,7 @@ const loadPosts = async () => {
 // display all posts in UI
   const displayPosts = (posts) => {
   const postsContainer = document.getElementById("discuss-section-container");
-
+  postsContainer.innerHTML = ""
     posts.forEach(post => {
     // create a div
     const div = document.createElement('div');
@@ -25,7 +30,7 @@ const loadPosts = async () => {
      <div class="h-20 w-20  lg:text-left lg:m-0 text-center m-auto bg-[#f9f9fafd] rounded-lg">
       <img src="${post.image}" alt="">
   </div>
-      <div class="h-5 w-5 lg:m-0 text-center m-auto bg-[#10B981] relative rounded-full left-9 lg:left-16 bottom-20 border-gray-200 border-2"></div>
+      <div class="h-5 w-5 lg:m-0 text-center m-auto ${post?.isActive?"bg-[#10B981]":"bg-red-600"} relative rounded-full left-9 lg:left-16 bottom-20 border-gray-200 border-2"></div>
   </div>
      <div>
      <div class="flex gap-10 justify-center lg:justify-start text-[#12132D99] font-bold">
@@ -49,7 +54,7 @@ const loadPosts = async () => {
      <img src="./images/time.png"> <span>${post.posted_time}</span></div>
  </div>
  <div>
-      <button onclick = 'handleAddToMark("${post.title.replace("'","")}--${post.view_count}")' class=" px-2 rounded-full bg-[#10B981] font-bold text-center  text-xl text-white"><i class="fa fa-envelope" style="font-size:15px"></i></button>
+      <button onclick = 'handleAddToMark("${post.title.replace("'","")}--${post.view_count}")' class= "px-2 rounded-full bg-[#10B981] font-bold text-center text-xl text-white"><i class="fa fa-envelope" style="font-size:15px"></i></button>
       </div>
      </div>
     </div>
@@ -61,8 +66,6 @@ const loadPosts = async () => {
   })
 }
 // call the 1st function for all posts
-loadPosts();
-
 
 // load latestPosts from API
 const loadLatestPosts = async () => {
@@ -83,7 +86,7 @@ const loadLatestPosts = async () => {
     div.innerHTML =`<div class="flex my-5 gap-3 w-4/5 m-auto">
       <div class="p-4 border rounded-xl">
       <div class="lg:w-72 h-44 2xl:w-full ml-3 2xl:gap-28 bg-[#12132D0D] rounded-2xl"><img class ="rounded-2xl" src="${latestPost.cover_image}" alt=""></div>
-      <div class="flex gap-2 my-6 text-[#12132D99] font-semibold justify-center lg:justify-start"><img src="./images/calender.png" alt=""> <span id="date" class="text-base font-bold text-[#12132D99]">Time:</span>${latestPost?.author?.posted_date || 'No publish date'}</div>
+      <div class="flex gap-2 my-6 text-[#12132D99] font-semibold justify-center lg:justify-start"><img src="./images/calender.png" alt=""> <span id="date" class="text-base font-bold text-[#12132D99]">Time:</span>${latestPost?.author?.posted_date || 'No Publish Date'}</div>
       <div class="lg:w-80 space-y-3 text-center lg:text-left">
       <h1 class="text-[#12132D] text-lg font-bold">${latestPost.title}</h1>
       <p class="text-base text-[#12132D99]">${latestPost.description}</p>
@@ -93,7 +96,7 @@ const loadLatestPosts = async () => {
       <img class="rounded-full" src="${latestPost.profile_image}" alt="">
  </div>
         <div>
-        <div class="flex lg:text-left text-center flex-col text-base font-bold">${latestPost.author.name}<span class="text-sm text-[#12132D80]">${latestPost?.author?.designation || 'No author found'}</span></div> 
+        <div class="flex lg:text-left text-center flex-col text-base font-bold">${latestPost.author.name}<span class="text-sm text-[#12132D80]">${latestPost?.author?.designation || 'Unknown'}</span></div> 
     </div>
   </div>
  </div>`
@@ -105,26 +108,37 @@ const loadLatestPosts = async () => {
 // call the 2nd function for latest posts
 loadLatestPosts();
 
-const handleAddToMark = (value) =>{
-const convertToArray = value.split("--")
-const [title, view_count] = convertToArray
-const convertedCount = Number(count.innerText )+1
-count.innerText = convertedCount;
 
-const div = document.createElement('div')
-div.classList = "flex  bg-white px-10 py-4 rounded-lg mt-7 flex-col lg:flex-row lg:justify-center items-center";
-div.innerHTML = `
-<div>
+// title and count view onclick
+   const markDivContainer = document.getElementById('mark-div-container');
+   const count = document.getElementById('count');
+
+
+   const handleAddToMark = (value) =>{
+   const convertToArray = value.split("--")
+   const [title, view_count] = convertToArray
+   const convertedCount = Number(count.innerText)+1
+   count.innerText = convertedCount;
+
+     const div = document.createElement('div')
+     div.classList = "flex  bg-white px-10 py-4 rounded-lg mt-7 flex-col lg:flex-row lg:justify-center items-center";
+     div.innerHTML = `<div>
              <h1 class="w-52 mt-auto my-3 lg:my-0 lg:text-left text-center text-base font-semibold text-black">${title}</h1>
      </div>
             <div>
             <div class="flex text-[#12132D99] font-medium space-x-2"> 
-            <img src="./images/tabler-icon-eye.png" alt="">
+            <img src="./images/eye.png" alt="">
             <span>${view_count}</span>
      </div>
-   </div>
+   </div>`
 
-`
-markDivContainer.appendChild(div);
-
+  //  appendChild
+   markDivContainer.appendChild(div);
 }
+
+btnContainer.addEventListener('click', () =>{
+     const inputValue = inputContainer.value
+     loadPosts(inputValue);
+})
+
+loadPosts();
