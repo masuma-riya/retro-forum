@@ -31,28 +31,58 @@
 <body>
     <header class="w-4/5 m-auto">
         <!-- navber starts here -->
-        <nav class="flex justify-between mt-8">
-            <div>
-                <h1 class="text-2xl lg:text-4xl font-black">WebLab</h1>
-            </div>
-            <div class="flex gap-7">
-                <div class="tooltip" data-tip="Home">
-                    <img src="./icons/home.png" alt="">
+        <nav class="flex lg:flex-row flex-col lg:justify-between  justify-center my-8 ">
+        <div>
+        <h1 class="text-2xl lg:text-4xl text-center font-black">WebLab</h1>
+    </div>
+        <div class="flex lg:flex-row mt-10 lg:mt-0 flex-col justify-center gap-7">
+        <div class="flex justify-center gap-5">
+        <div class="tooltip" data-tip="Home">
+        <img src="./icons/home.png" alt=""></div>
+        <div class="tooltip" data-tip="Edit">
+        <img src="./icons/pencil.png" alt=""></div>
+        <div class="tooltip" data-tip="Add">
+        <img src="./icons/user.png" alt=""></div>
+        <div class="tooltip" data-tip="Flag">
+        <img src="./icons/flag.png" alt=""></div>
+    </div>
+        <div class="flex justify-center" >
+        <button class="btn text-center bg-[#797DFC] rounded-full w-28 text-white font-bold">Sign In</button>
                 </div>
-                <div class="tooltip" data-tip="Edit">
-                    <img src="./icons/pencil.png" alt="">
-                </div>
-                <div class="tooltip" data-tip="Add">
-                    <img src="./icons/user.png" alt="">
-                </div>
-                <div class="tooltip" data-tip="Flag">
-                    <img src="./icons/flag.png" alt="">
-                </div>
-                <button class="btn bg-[#797DFC] rounded-full w-28 text-white font-bold">Sign In</button>
             </div>
         </nav>
-        <!-- banner section starts here -->
         
+        <!-- banner section starts here -->
+        <section class="lg:p-20 lg:gap-20 p-4 m-auto rounded-3xl bg-[url(./images/bgbanner.png)]  bg-[#12132D] bg-cover  lg:px-6 flex flex-col lg:flex-row justify-center items-center mt-10">
+        <div class="text-center lg:text-left">
+            <h1 class="text-white text-2xl lg:max-w-lg lg:text-5xl font-black ">Welcome to the<br> <span class="text-[#797DFCFF]">webLab</span> Forum</h1>
+            <p class="my-6 text-sm lg:text-xl text-gray-400 font-500 lg:max-w-md">Share your favorite opinion and win a gift from us. Don't miss this opportunity anyway!</p>
+            <div class="bg-white lg:w-96 m-auto lg:m-0 p-1 flex rounded-3xl">
+            <input id="input-container" type="text" placeholder="search here anything" class="input w-full max-w-xs" />
+            <button id="button-container" class="btn bg-[#797DFC] rounded-full w-28 text-white font-semibold text-lg">Search</button>
+            </div>
+        </div>
+        <div class="bg-white lg:mt-0 mt-5 rounded-3xl p-8">
+            <div class="w-56">
+                <div class="flex justify-around text-xl leading-10">
+                    <h1 class="text-[#12132DCC] font-medium">Registered Users</h1>
+                    <p class="text-[#12132DCC] font-medium">01</p>
+                </div>
+                <div class="flex justify-around text-xl leading-10">
+                    <h1 class="text-[#12132DCC] font-medium">Forums</h1>
+                    <p class="text-[#12132DCC] font-medium">02</p>
+                </div>
+                <div class="flex justify-around text-xl leading-10">
+                    <h1 class="text-[#12132DCC] font-medium">Topics</h1>
+                    <p class="text-[#12132DCC] font-medium">03</p>
+                </div>
+                <div class="flex justify-around text-xl leading-10">
+                    <h1 class="text-[#12132DCC] font-medium">Replies</h1>
+                    <p class="text-[#12132DCC] font-medium">04</p>
+                </div>
+            </div>
+        </div>
+    </section>
     </header>
 
     <!-- main starts here -->
@@ -119,7 +149,7 @@
     <footer class="bg-[#6d6e811a] w-full m-auto h-[489px] text-center mt-20 py-28">
         <div>
             <h1 class="text-4xl font-black text-[#12132D]">WebLab</h1>
-            <p class="text-[#12132D99] text-xl font-medium my-6">This here forum is for staying in touch, for those with an interest in retrocomputing,<br>computer history, vintage computing, and similar things.</p>
+            <p class="text-[#12132D99] text-base lg:text-xl font-medium my-6">This here forum is for staying in touch, for those with an interest in retrocomputing,<br>computer history, vintage computing, and similar things.</p>
             <div class="space-x-6 mt-6">
                 <i class="fa-brands fa-twitter text-3xl"></i>
                 <i class="fa-brands fa-facebook-f text-3xl"></i>
