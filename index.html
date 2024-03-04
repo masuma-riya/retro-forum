@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retro forum</title>
+    <title>Web Lab</title>
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- added google font -->
@@ -28,7 +28,7 @@
         <!-- navber starts here -->
         <nav class="w-4/5 m-auto flex justify-between mt-8">
             <div>
-                <h1 class="text-2xl lg:text-4xl font-black">ReTro</h1>
+                <h1 class="text-2xl lg:text-4xl font-black">WebLab</h1>
             </div>
             <div class="flex gap-7">
                 <div class="tooltip" data-tip="Home">
@@ -50,30 +50,30 @@
         <section
             class="p-5 max-w-6xl m-auto h-[550px] rounded-3xl bg-[url(./images/bgbanner.png)] bg-[#12132D] bg-cover flex flex-col lg:flex-row justify-center items-center lg:px-40 mt-10">
             <div>
-                <h1 class="text-white text-3xl lg:text-5xl font-black lg:pr-48">Welcome to the <span class="text-[#797DFCFF]">ReTro</span> Forum</h1>
-                <p class="my-6 text-lg lg:text-xl text-gray-400 font-500 lg:pr-48">Share your favorite opinion and win and wp forum coffee mug!</p>
+                <h1 class="text-white text-3xl lg:text-5xl font-black lg:pr-48">Welcome to the <span class="text-[#797DFCFF]">webLab</span> Forum</h1>
+                <p class="my-6 text-lg lg:text-xl text-gray-400 font-500 lg:pr-48">Share your favorite opinion and win a gift from us. Don't miss this opportunity anyway!</p>
                 <div class="bg-white w-96 p-1 flex rounded-3xl">
                 <input id="input-container" type="text" placeholder="search here anything" class="input w-full max-w-xs" />
                 <button id="button-container" class="btn bg-[#797DFC] rounded-full w-28 text-white font-semibold text-lg">Search</button>
                 </div>
             </div>
             <div class="bg-white lg:w-96 h-64 rounded-3xl">
-                <div class="mt-10">
+                <div class="mt-12">
                     <div class="flex justify-around text-xl leading-10">
                         <h1 class="text-[#12132DCC] font-medium">Registered Users</h1>
                         <p class="text-[#12132DCC] font-medium">01</p>
                     </div>
                     <div class="flex justify-around text-xl leading-10">
-                        <h1 class="text-[#12132DCC] font-medium">Forum</h1>
-                        <p class="text-[#12132DCC] font-medium">05</p>
+                        <h1 class="text-[#12132DCC] font-medium">Forums</h1>
+                        <p class="text-[#12132DCC] font-medium">02</p>
                     </div>
                     <div class="flex justify-around text-xl leading-10">
                         <h1 class="text-[#12132DCC] font-medium">Topics</h1>
-                        <p class="text-[#12132DCC] font-medium">01</p>
+                        <p class="text-[#12132DCC] font-medium">03</p>
                     </div>
                     <div class="flex justify-around text-xl leading-10">
                         <h1 class="text-[#12132DCC] font-medium">Replies</h1>
-                        <p class="text-[#12132DCC] font-medium">01</p>
+                        <p class="text-[#12132DCC] font-medium">04</p>
                     </div>
                 </div>
             </div>
@@ -86,8 +86,14 @@
     <section class=" mt-10 lg:mt-20 max-w-7xl m-auto">
         <div class="text-center m-auto max-w-2xl">
             <h1 class="text-4xl mb-3 font-black">Let's Discuss</h1>
-            <p class="text-lg font-normal text-gray-500"> Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined</p>
+            <p class="text-lg font-normal text-gray-500">Please direct all questions to this thread instead of starting new ones. We will post all updates here and thread in the WebLab...!</p>
         </div>
+
+    <!-- Loader start -->
+    <div id="loading-spin" class="text-center my-8 hidden">
+        <span class="loading loading-spinner loading-lg"></span>
+    </div>
+    <!-- loader end -->
         <div class="flex flex-col lg:flex-row lg:justify-center gap-5 mb-5 mt-10">
         <div class="flex flex-col gap-5" id="discuss-section-container"></div>
           
@@ -117,9 +123,8 @@
             class="max-w-6xl m-auto bg-[#12132D] rounded-3xl mt-24 h-[403px] flex flex-col lg:flex-row justify-center items-center">
             <div class="flex">
                 <div class="mt-14">
-                    <h1 class="text-4xl font-black text-white">Join Our Forum</h1>
-                    <p class="text-lg font-normal text-white my-6">Share your favorite opinion and win and wp forum
-                        coffee mug! Yes, you can<br>run unit tests and view the results directly within the app.</p>
+                    <h1 class="text-4xl font-black text-white">Join Our WebLab</h1>
+                    <p class="text-lg font-normal text-white my-6">Share your favorite opinion and win forum coffee mug! Yes, you can<br>run unit tests and view the results directly within the app.</p>
                     <button
                         class="btn bg-[#797DFC] rounded-full w-52 border-none text-white font-semibold text-lg">Registered
                         Now</button>
@@ -129,10 +134,10 @@
         </section>
 
 <!-- latest posts section starts here -->
-<section class="mt-20 mb-10">
+<section class="mt-20 mb-10 ml-16">
     <div class="text-center mb-10">
         <h1 class="text-4xl font-black">Latest Posts</h1>
-        <p class="text-lg font-normal text-[#12132D99] my-4">Yes, you can run unit tests and view the results directly within the app. The<br>integrated testing features allow for a streamlined .</p>
+        <p class="text-lg font-normal text-[#12132D99] my-4">The Retro Gamer forum will be closing down soon. You can read more here.<br>Just a reminder that you can always reach us on WebLab...!</p>
   </div>
     <div id="latest-posts" class="flex flex-col lg:flex-row max-w-7xl m-auto gap-6"></div>
   </section>
@@ -140,9 +145,8 @@
     <!-- footer starts here -->
     <footer class="bg-[#6d6e811a] w-full m-auto h-[489px] text-center mt-20 py-28">
         <div>
-            <h1 class="text-4xl font-black text-[#12132D]">ReTro</h1>
-            <p class="text-[#12132D99] text-lg font-medium my-6">Contrary to popular belief, Lorem Ipsum is not simply
-                random text. It has roots<br>in a piece of classical Latin literature from 45 BC</p>
+            <h1 class="text-4xl font-black text-[#12132D]">WebLab</h1>
+            <p class="text-[#12132D99] text-xl font-medium my-6">This here forum is for staying in touch, for those with an interest in retrocomputing,<br>computer history, vintage computing, and similar things.</p>
             <div class="space-x-6 mt-6">
                 <i class="fa-brands fa-twitter text-3xl"></i>
                 <i class="fa-brands fa-facebook-f text-3xl"></i>

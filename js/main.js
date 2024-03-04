@@ -1,6 +1,3 @@
-const inputContainer = document.getElementById('input-container');
-const btnContainer = document.getElementById('button-container');
-
 // load data from API
 const loadPosts = async (inputValue) => {
   let url;
@@ -63,9 +60,14 @@ const loadPosts = async (inputValue) => {
 
   //   appendChild
     postsContainer.appendChild(div);
-  })
+  });
+  
+  // hide loading spinner
+  setTimeout(() => {
+    spinner(false);
+  }, 2000);
 }
-// call the 1st function for all posts
+
 
 // load latestPosts from API
 const loadLatestPosts = async () => {
@@ -136,9 +138,26 @@ loadLatestPosts();
    markDivContainer.appendChild(div);
 }
 
+const inputContainer = document.getElementById('input-container');
+const btnContainer = document.getElementById('button-container');
+
 btnContainer.addEventListener('click', () =>{
-     const inputValue = inputContainer.value
+     spinner(true);
+     const inputValue = inputContainer.value;
      loadPosts(inputValue);
 })
+
+//  Loader
+  const spinner = (isLoading) =>{
+  const loadingSpinner = document.getElementById('loading-spin');
+   
+  if(isLoading){
+    loadingSpinner.classList.remove('hidden');
+  }
+
+  else{
+    loadingSpinner.classList.add('hidden');
+  }
+}
 
 loadPosts();
