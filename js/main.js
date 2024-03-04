@@ -85,7 +85,7 @@ const loadLatestPosts = async () => {
     // set innerHtml
     div.innerHTML =`<div class="flex my-5 gap-3 w-4/5 m-auto">
       <div class="p-4 border rounded-xl">
-      <div class="lg:w-72 h-44 2xl:w-full ml-3 2xl:gap-28 bg-[#12132D0D] rounded-2xl"><img class ="rounded-2xl" src="${latestPost.cover_image}" alt=""></div>
+      <div class="lg:w-72 h-44 w-full ml-3 2xl:gap-28 bg-[#12132D0D] rounded-2xl"><img class ="rounded-2xl" src="${latestPost.cover_image}" alt=""></div>
       <div class="flex gap-2 my-6 text-[#12132D99] font-semibold justify-center lg:justify-start"><img src="./images/calender.png" alt=""> <span id="date" class="text-base font-bold text-[#12132D99]">Time:</span>${latestPost?.author?.posted_date || 'No Publish Date'}</div>
       <div class="lg:w-80 space-y-3 text-center lg:text-left">
       <h1 class="text-[#12132D] text-lg font-bold">${latestPost.title}</h1>
